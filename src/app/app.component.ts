@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { 
+  ChangeDetectorRef,
+  Component,
+  ViewChild, } from '@angular/core';
 import { TsRadioFormatFn,TsRadioChange,
   TsRadioOption, } from '@terminus/ui-radio-group';
 import { Observable, of } from 'rxjs';
@@ -7,6 +10,11 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import {
+  TsPaginatorComponent,
+  TsPaginatorMenuItem,
+} from '@terminus/ui-paginator';
+import { TsStyleThemeTypes } from '@terminus/ui-utilities';
 
 const DEMO_ITEMS: TsRadioOption[] = [
   {
@@ -58,6 +66,21 @@ const SVG = `
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  myTheme: TsStyleThemeTypes = 'primary';
+  recordCount = 114;
+  showSelector = true;
+  currentPageIndex = 0;
+  location = 'below';
+  pages: number[] = [0, 1, 2, 3, 4, 5];
+  zeroBased = true;
+  simpleMode = false;
+  currentPage = this.zeroBased ? 0 : 1;
+
+  @ViewChild(TsPaginatorComponent, { static: true })
+  paginator!: TsPaginatorComponent;
+
+
   title = 'design-tokens3';
 
   uiFormatter: TsRadioFormatFn = v => v.bar;
@@ -106,6 +129,7 @@ export class AppComponent {
 
   constructor(
     private formBuilder: FormBuilder,
+    private changeDetectorRef: ChangeDetectorRef,
   ){}
 
   selected(e: TsRadioChange): void {
@@ -114,5 +138,31 @@ export class AppComponent {
 
   log(v: any): void {
     console.log('DEMO: form submission: ', v);
+  }
+
+  updatePages(isZeroBased: boolean): void {
+    Promise.resolve().then(() => {
+      if (isZeroBased) {
+        this.pages = Array.from(Array(this.paginator.pagesArray.length).keys());
+      } else {
+        // NOTE: Prepending the incrementer (++) will increment the value _before_ returning the value.
+        this.pages = Array.from(Array(this.paginator.pagesArray.length).keys()).map(v => ++v);
+      }
+      this.changeDetectorRef.detectChanges();
+    });
+  }
+
+  onPageSelect(e: TsPaginatorMenuItem): void {
+    console.log('DEMO: page selected: ', e);
+    
+    if (e.value > this.currentPage) {
+      this.currentPage = this.currentPage + 1;
+    }
+    console.log('current page index; ', this.currentPage);
+  }
+
+
+  perPageChange(e: number): void {
+    console.log('DEMO: records per page changed: ', e);
   }
 }

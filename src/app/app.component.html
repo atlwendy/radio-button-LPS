@@ -1,3 +1,28 @@
+<ts-login-form
+
+>
+
+</ts-login-form>
+
+<ts-paginator
+    [theme]="myTheme"
+    [totalRecords]="recordCount"
+    [showRecordsPerPageSelector]="showSelector"
+    [currentPageIndex]="currentPageIndex"
+    [menuLocation]="location"
+    [paginatorMessageTemplate]="myTemplate"
+    [isZeroBased]="zeroBased"
+    [isSimpleMode]="true"
+    recordCountTooHighMessage="Please refine your filters."
+    (recordsPerPageChange)="perPageChange($event)"
+    (pageSelect)="onPageSelect($event)"
+  ></ts-paginator>
+
+  <ng-template #myTemplate let-message>
+    <a routerLink="/components/link">{{ message }}</a>
+  </ng-template>
+
+
 <h3 tsCardTitle tsVerticalSpacing>
   Group 2 - visual
 </h3>
