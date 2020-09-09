@@ -6,6 +6,8 @@ import { TsRadioGroupModule } from '@terminus/ui-radio-group';
 import { TsPaginatorModule } from '@terminus/ui-paginator';
 import { TsLoginFormModule } from '@terminus/ui-login-form';
 import { TsPipesModule } from '@terminus/ui-pipes';
+import { TsSelectionListModule } from '@terminus/ui-selection-list';
+import { TsOptionModule } from '@terminus/ui-option';
 import {
   FormsModule,
   ReactiveFormsModule,
@@ -25,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TsPaginatorModule,
     TsLoginFormModule,
     TsPipesModule,
+    TsSelectionListModule,
+    TsOptionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

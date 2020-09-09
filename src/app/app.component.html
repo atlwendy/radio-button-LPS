@@ -1,43 +1,19 @@
-<ts-login-form
+<h2>number of states: {{ states.length }}</h2>
 
+<ts-selection-list
+  class="selection-list"
+  label="Select states"
+  hint="Begin typing to search.."
+  [allowUserInput]="false"
+  [formControl]="complexMultipleControl"
+  [displayFormatter]="formatter"
 >
+  <ts-option
+    [value]="state"
+    [option]="state"
+    *ngFor="let state of states"
+  >
+    {{ state.name }}
+  </ts-option>
+</ts-selection-list>
 
-</ts-login-form>
-
-<ts-paginator
-    [theme]="myTheme"
-    [totalRecords]="recordCount"
-    [showRecordsPerPageSelector]="showSelector"
-    [currentPageIndex]="currentPageIndex"
-    [menuLocation]="location"
-    [paginatorMessageTemplate]="myTemplate"
-    [isZeroBased]="zeroBased"
-    [isSimpleMode]="true"
-    recordCountTooHighMessage="Please refine your filters."
-    (recordsPerPageChange)="perPageChange($event)"
-    (pageSelect)="onPageSelect($event)"
-  ></ts-paginator>
-
-  <ng-template #myTemplate let-message>
-    <a routerLink="/components/link">{{ message }}</a>
-  </ng-template>
-
-
-<h3 tsCardTitle tsVerticalSpacing>
-  Group 2 - visual
-</h3>
-
-
-<ts-radio-group
-  [isVisual]="true"
-  [small]="myForm.get('isSmall')?.value"
-  [centeredContent]="myForm.get('isCentered')?.value"
-  [formatUILabelFn]="uiFormatter"
-  [formatUISubLabelFn]="uiSubFormatter"
-  [formatModelValueFn]="modelFormatter"
-  [formControl]="myForm.get('myRadioGroup2')"
-  [options]="items2$ | async"
-  (selectionChange)="selected($event)"
-></ts-radio-group>
-
-Selected value: {{ myForm.get('myRadioGroup2')?.value }}

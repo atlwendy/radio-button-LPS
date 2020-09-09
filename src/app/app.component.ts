@@ -15,6 +15,10 @@ import {
   TsPaginatorMenuItem,
 } from '@terminus/ui-paginator';
 import { TsStyleThemeTypes } from '@terminus/ui-utilities';
+import { FormControl } from '@angular/forms';
+import {
+  AfterViewInit, 
+} from '@angular/core';
 
 const DEMO_ITEMS: TsRadioOption[] = [
   {
@@ -65,7 +69,7 @@ const SVG = `
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
   myTheme: TsStyleThemeTypes = 'primary';
   recordCount = 114;
@@ -76,6 +80,10 @@ export class AppComponent {
   zeroBased = true;
   simpleMode = false;
   currentPage = this.zeroBased ? 0 : 1;
+  public complexMultipleControl = new FormControl('');
+  public formatter(value): string {
+    return value.name;
+  }
 
   @ViewChild(TsPaginatorComponent, { static: true })
   paginator!: TsPaginatorComponent;
@@ -109,6 +117,7 @@ export class AppComponent {
       bing: 'Some helper text. Some helper text for my item. Some helper text. And even more text.',
     },
   ]);
+  public states = [];
 
   myForm: FormGroup = this.formBuilder.group({
     isSmall: false,
@@ -130,7 +139,17 @@ export class AppComponent {
   constructor(
     private formBuilder: FormBuilder,
     private changeDetectorRef: ChangeDetectorRef,
-  ){}
+  ){
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.states = [
+        {name: 'WA', value: 'washington'},
+        {name: 'PA', value: 'pennsylvania'},
+      ]
+    }, 2000)
+  }
 
   selected(e: TsRadioChange): void {
     console.log('DEMO: radio changed: ', e);
