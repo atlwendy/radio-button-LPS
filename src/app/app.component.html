@@ -1,19 +1,6 @@
-<h2>number of states: {{ states.length }}</h2>
-
-<ts-selection-list
-  class="selection-list"
-  label="Select states"
-  hint="Begin typing to search.."
-  [allowUserInput]="false"
-  [formControl]="complexMultipleControl"
-  [displayFormatter]="formatter"
->
-  <ts-option
-    [value]="state"
-    [option]="state"
-    *ngFor="let state of states"
-  >
-    {{ state.name }}
-  </ts-option>
-</ts-selection-list>
-
+<app-checkbox-group>
+  <ts-checkbox>APAC</ts-checkbox>
+  <ts-checkbox>A</ts-checkbox>
+  <ts-checkbox>B</ts-checkbox>
+  <ts-checkbox>C</ts-checkbox>
+</app-checkbox-group>

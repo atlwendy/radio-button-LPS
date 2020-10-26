@@ -13,6 +13,8 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CheckboxGroupModule } from './checkbox-group/checkbox-group.module';
+import { TsCheckboxModule } from '@terminus/ui-checkbox';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     TsRadioGroupModule,
+    TsCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
     TsPaginatorModule,
@@ -29,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TsPipesModule,
     TsSelectionListModule,
     TsOptionModule,
+    CheckboxGroupModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

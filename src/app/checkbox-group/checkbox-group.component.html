@@ -1,0 +1,26 @@
+<ng-template *ngTemplateOutlet="contentTemplate"></ng-template>
+
+<div
+  class="c-top__list"
+  fxLayout="row"
+  [fxLayoutGap]="tsSpacings.large[3]"
+>
+
+  <div
+    class="c-second__list"
+    fxLayout="column"
+    [fxLayoutGap]="tsSpacings.small[0]"
+  >
+    <ng-template *ngTemplateOutlet="contentTemplate2"></ng-template>
+  </div>
+</div>
+
+<ng-template #contentTemplate>
+  <ng-content></ng-content>
+</ng-template>
+
+<ng-template #contentTemplate2>
+  <ng-content></ng-content>
+</ng-template>
+
+

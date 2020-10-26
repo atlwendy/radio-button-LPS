@@ -233,6 +233,11 @@
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-9.1.12.tgz#332935d5ec4b44daaad1beae496dd994e2847a03"
   integrity sha512-NmwUZaQeMnA6f+vP9Fp9P+qjL72H8dKlxLS76ujlKHVf75pP5oahWS8wfl7KXel1tKW3FQWMMffmKf5/NHRiSw==
 
+"@angular/platform-browser@9.1.11":
+  version "9.1.11"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.1.11.tgz#4da8e2a4231d5162304746a39f54cb2d3f241b7c"
+  integrity sha512-KDxoiFhW4UD+EqchcKpQVSLwg9Rd3JbWytZLchFV6nH8BFnshfJtw2tyPT8bMhFVG9n9zSR4QSGaozWgoDs9mw==
+
 "@angular/platform-browser@~9.1.11":
   version "9.1.12"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.1.12.tgz#f99fc360c40efd013677cc9ef4ead13425084a91"
@@ -1169,6 +1174,11 @@
     semver "7.1.3"
     semver-intersect "1.4.0"
 
+"@terminus/design-tokens@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@terminus/design-tokens/-/design-tokens-3.2.0.tgz#df8e636df5f0513f0a70b11d9a8e28b5520546cb"
+  integrity sha512-o708JgZ4m69JPJMVmSX7PsN9udlJRUiWKvJgvBM0XjrAOGjC0P6Dtf/JFvJPPqzx2DO5sWOEDNGZ3uEyiOaBOQ==
+
 "@terminus/design-tokens@^3.1.0":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@terminus/design-tokens/-/design-tokens-3.1.2.tgz#7b917dc2b638c94efa207bfd47eaa93f90808b63"
@@ -1183,6 +1193,25 @@
   version "8.0.6"
   resolved "https://registry.yarnpkg.com/@terminus/ngx-tools/-/ngx-tools-8.0.6.tgz#36977e9083b26c34ac86422a94ff1f9958effb3c"
   integrity sha512-q37GMgHpam34TVsRFqwN0RDEtVdh2gf4Di1ZWXaBlZS7+iTw1c8BZCUZxsfpqbjTXPaL3D3EpiDKX1yxCt/dGw==
+
+"@terminus/ui-autofocus@1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-autofocus/-/ui-autofocus-1.1.4.tgz#90cdf1ecacb24a87a863e959efc8290942fc3e49"
+  integrity sha512-bHU3nx7nluRxD5BlptVR6qyDvGPdKHmU1loQX8OOhd7GoQ8EIN01ObWIsLNYnu8t3IXpP5aasiP0FzuC+BEgHQ==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/forms" "9.1.11"
+    "@angular/material" "9.2.4"
+    "@angular/platform-browser" "9.1.11"
+    "@angular/router" "9.1.11"
+    "@schematics/angular" "9.1.12"
+    "@terminus/design-tokens" "3.2.0"
+    date-fns "2.16.1"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.3"
+    tslib "^1.10.0"
 
 "@terminus/ui-button@ ^2.0.7":
   version "2.0.9"
@@ -1199,7 +1228,37 @@
     rxjs "6.6.2"
     tslib "^1.10.0"
 
-"@terminus/ui-checkbox@ ^2.0.6", "@terminus/ui-checkbox@2.0.7":
+"@terminus/ui-checkbox@ ^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-checkbox/-/ui-checkbox-3.0.0.tgz#ddf972fedf602fec5b2b63c4b67e9234dc868187"
+  integrity sha512-UibUKcFaLk4cgKTt0uiA/25A7eQ2B/TEPJRXw7l2+EoYYSiamhkb2U5sSUJjNZFnU6bq3dqx6GrufEckOrQgsg==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/cdk" "9.2.4"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/material" "9.2.4"
+    "@angular/router" "9.1.11"
+    "@fortawesome/angular-fontawesome" "0.6.0"
+    "@fortawesome/fontawesome-svg-core" "1.2.30"
+    "@fortawesome/pro-solid-svg-icons" "5.14.0"
+    "@schematics/angular" "9.1.12"
+    "@terminus/ui-autofocus" "1.1.4"
+    "@terminus/ui-form-field" "2.1.0"
+    "@terminus/ui-icon" "2.1.3"
+    "@terminus/ui-input" "2.1.3"
+    "@terminus/ui-pipes" "1.1.5"
+    "@terminus/ui-spacing" "1.1.3"
+    "@terminus/ui-validation-messages" "1.1.3"
+    "@terminus/ui-validators" "2.0.4"
+    date-fns "2.16.1"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.3"
+    text-mask-addons "3.8.0"
+    text-mask-core "5.1.2"
+    tslib "^1.10.0"
+
+"@terminus/ui-checkbox@2.0.7":
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/@terminus/ui-checkbox/-/ui-checkbox-2.0.7.tgz#7e77bad06c5dec2a2b1a155e7806cda2a6d5b87d"
   integrity sha512-d+8QEbGdJ9a347hvfT0DSEIUax2nqqgSG0n0b5V0CphvRmnGV4JMZIAnThs4pGozGpexmHCG9YAaHcrmtDazQA==
@@ -1259,6 +1318,22 @@
     date-fns "2.15.0"
     tslib "^1.10.0"
 
+"@terminus/ui-form-field@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-form-field/-/ui-form-field-2.1.0.tgz#cc8686eebcd01ec8dd2cf16635a0c46aa7b597f2"
+  integrity sha512-hGEvPvq3WsJEcb2JiwAQL7JImW23y7IbXNp0oWkaqxojWMM604Wkl5bOm65JdJ2B1tIuRjTkvGG6WMiAcvKgIA==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/material" "9.2.4"
+    "@angular/router" "9.1.11"
+    "@schematics/angular" "9.1.12"
+    "@terminus/ui-pipes" "1.1.0"
+    "@terminus/ui-utilities" "1.1.0"
+    date-fns "2.15.0"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    tslib "^1.10.0"
+
 "@terminus/ui-icon@ ^2.0.5":
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/@terminus/ui-icon/-/ui-icon-2.0.7.tgz#3f4d093df8581d45ca4bb4c345f10277d7141907"
@@ -1311,6 +1386,25 @@
     "@schematics/angular" "9.1.12"
     tslib "^1.10.0"
 
+"@terminus/ui-icon@2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-icon/-/ui-icon-2.1.3.tgz#8ea66cb9f9696515a1a48d5baa0bcecac39eb780"
+  integrity sha512-gwZXx4wzrfrtwXKXov8PKNMclh0VeThq+3mMQKYg6cu2o/7/27vX3Y39p8AgoIKesOYiy3r4prg4s6vsxoB0kg==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/forms" "9.1.11"
+    "@angular/router" "9.1.11"
+    "@fortawesome/angular-fontawesome" "0.6.0"
+    "@fortawesome/fontawesome-svg-core" "1.2.30"
+    "@fortawesome/pro-solid-svg-icons" "5.14.0"
+    "@schematics/angular" "9.1.12"
+    date-fns "2.16.1"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.3"
+    tslib "^1.10.0"
+
 "@terminus/ui-input@ ^2.0.7", "@terminus/ui-input@2.0.8":
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/@terminus/ui-input/-/ui-input-2.0.8.tgz#b714b56d69afa89ba4552b02eed8955b8f048539"
@@ -1322,6 +1416,22 @@
     "@fortawesome/pro-solid-svg-icons" "5.14.0"
     "@schematics/angular" "9.1.12"
     "@terminus/ui-utilities" "1.0.10"
+    tslib "^1.10.0"
+
+"@terminus/ui-input@2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-input/-/ui-input-2.1.3.tgz#99c5b2df375b78d837ad299d9613eeb88c61e2ec"
+  integrity sha512-guVa6sdn4DcfFppTdhNHtCdPyVMrRFs9vNlW0by2/5MGWvgoiwsMaY5n34pEURBWSnf4HsU49QiR4n9Ro8Tqeg==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/router" "9.1.11"
+    "@fortawesome/angular-fontawesome" "0.6.0"
+    "@fortawesome/fontawesome-svg-core" "1.2.30"
+    "@fortawesome/pro-solid-svg-icons" "5.14.0"
+    "@schematics/angular" "9.1.12"
+    "@terminus/ui-utilities" "1.1.0"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
     tslib "^1.10.0"
 
 "@terminus/ui-link@2.0.12":
@@ -1463,6 +1573,40 @@
     rxjs "6.6.2"
     tslib "^1.10.0"
 
+"@terminus/ui-pipes@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-pipes/-/ui-pipes-1.1.0.tgz#b254db0a7ce9ddbf562a6a3af564f05614704f57"
+  integrity sha512-s+X9Nz5Hc3f5AUzm8DDOtffrRnmNuCd3X35mQoDhXmOzF+AcqE/7LFgZZ/lrqetSZkQxkzePImsvY8o4kkeKPQ==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/forms" "9.1.11"
+    "@angular/material" "9.2.4"
+    "@angular/platform-browser" "9.1.11"
+    "@angular/router" "9.1.11"
+    "@schematics/angular" "9.1.12"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.2"
+    tslib "^1.10.0"
+
+"@terminus/ui-pipes@1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-pipes/-/ui-pipes-1.1.5.tgz#d1dc17412070af63cb272e015400d6abea39ce8f"
+  integrity sha512-Vhc0X8sc/VJVPcYPAJaH/QwHxeYDToLuK3ZLlP8FmPVEye+GHvTsJl1rjfBrBsIeRTC8xehOfdyeP67N6UgFTg==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/forms" "9.1.11"
+    "@angular/material" "9.2.4"
+    "@angular/platform-browser" "9.1.11"
+    "@angular/router" "9.1.11"
+    "@schematics/angular" "9.1.12"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.3"
+    tslib "^1.10.0"
+
 "@terminus/ui-radio-group@2.0.9":
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/@terminus/ui-radio-group/-/ui-radio-group-2.0.9.tgz#d9a637be649a0809e12898537c0d2fc2395228ad"
@@ -1514,6 +1658,23 @@
     "@schematics/angular" "9.1.12"
     tslib "^1.10.0"
 
+"@terminus/ui-spacing@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-spacing/-/ui-spacing-1.1.3.tgz#f23fda8f3e20f81043fe155889d99af75a9effba"
+  integrity sha512-dOMk/hbSmRR8wDifDH5YTyYr/jm8dptO0ZFTiHeJHA9iEtqPakArnm5MO1efVewr7v/irKPdcJZF+iApfzYgsQ==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/forms" "9.1.11"
+    "@angular/material" "9.2.4"
+    "@angular/router" "9.1.11"
+    "@schematics/angular" "9.1.12"
+    date-fns "2.16.1"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.3"
+    tslib "^1.10.0"
+
 "@terminus/ui-styles@ ^1.0.13":
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/@terminus/ui-styles/-/ui-styles-1.0.14.tgz#bcf0f7c6b5b991fb3ca1b4a9be3c720d267a3dde"
@@ -1562,6 +1723,16 @@
     rxjs "6.6.2"
     tslib "^1.10.0"
 
+"@terminus/ui-utilities@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-utilities/-/ui-utilities-1.1.0.tgz#3df3343df1938a2fb81e4d2fc75bf2badd8f0061"
+  integrity sha512-DBNG2xazSp9LlnGyOUkv/OdfMAgIt726GAESn25rr7wukvyJwmV0XjwfjvFVaiXt9CFTZacx/IH8AyUqcnr2Zg==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@schematics/angular" "9.1.12"
+    rxjs "6.6.2"
+    tslib "^1.10.0"
+
 "@terminus/ui-validation-messages@1.0.15", "@terminus/ui-validation-messages@^1.0.0":
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/@terminus/ui-validation-messages/-/ui-validation-messages-1.0.15.tgz#42dc905a29f10e838e0fda8513f6770edc65d2a4"
@@ -1582,6 +1753,21 @@
     rxjs "6.6.2"
     tslib "^1.10.0"
 
+"@terminus/ui-validation-messages@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-validation-messages/-/ui-validation-messages-1.1.3.tgz#d332c654a86d758cfd7322e505119231f57aa376"
+  integrity sha512-UPSWmwmZDSjLoDpxq7cvGoHpIYlev4C66ISxRHKwf/gba80shpX+24y7WfnKkhdgBw4oXehY4ETFeoTJqNT3cQ==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/material" "9.2.4"
+    "@angular/router" "9.1.11"
+    "@schematics/angular" "9.1.12"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.3"
+    tslib "^1.10.0"
+
 "@terminus/ui-validators@1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@terminus/ui-validators/-/ui-validators-1.0.10.tgz#f61110a670f27755e16b7013a1954051ba3000ff"
@@ -1590,6 +1776,26 @@
     "@angular-devkit/schematics" "9.1.9"
     "@schematics/angular" "9.1.12"
     rxjs "6.6.2"
+    tslib "^1.10.0"
+
+"@terminus/ui-validators@2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@terminus/ui-validators/-/ui-validators-2.0.4.tgz#02c4ba890cd648156c8c43ff4c99c88bf8263b16"
+  integrity sha512-ZT4mid/V+XTqSmmBosYjoOavfWxwtc38GlosZMqSjLTXlnhC79LnHvhDznLZfOs3W4ArRYwSvZ/HJ5qH2XBJfQ==
+  dependencies:
+    "@angular-devkit/schematics" "9.1.9"
+    "@angular/flex-layout" "9.0.0-beta.31"
+    "@angular/material" "9.2.4"
+    "@angular/platform-browser" "9.1.11"
+    "@angular/router" "9.1.11"
+    "@schematics/angular" "9.1.12"
+    "@terminus/design-tokens" "3.2.0"
+    "@terminus/ui-pipes" "1.1.5"
+    "@terminus/ui-spacing" "1.1.3"
+    "@terminus/ui-validation-messages" "1.1.3"
+    ngx-clipboard "13.0.1"
+    ngx-webstorage-service "4.1.0"
+    rxjs "6.6.3"
     tslib "^1.10.0"
 
 "@terminus/ui-validators@^1.0.0":
@@ -3377,6 +3583,11 @@ dashdash@^1.12.0:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.15.0.tgz#424de6b3778e4e69d3ff27046ec136af58ae5d5f"
   integrity sha512-ZCPzAMJZn3rNUvvQIMlXhDr4A+Ar07eLeGsGREoWU19a3Pqf5oYa+ccd+B3F6XVtQY6HANMFdOQ8A+ipFnvJdQ==
+
+date-fns@2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
+  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
 
 date-format@^2.1.0:
   version "2.1.0"
@@ -7656,6 +7867,13 @@ rxjs@6.6.2, rxjs@^6.5.3:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.2.tgz#8096a7ac03f2cc4fe5860ef6e572810d9e01c0d2"
   integrity sha512-BHdBMVoWC2sL26w//BCu3YzKT4s2jip/WhwsGEDmeKYBhKDZeYezVUnHatYB7L85v5xs0BAQmg6BEYJEKxBabg==
+  dependencies:
+    tslib "^1.9.0"
+
+rxjs@6.6.3:
+  version "6.6.3"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
+  integrity sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
   dependencies:
     tslib "^1.9.0"
 
